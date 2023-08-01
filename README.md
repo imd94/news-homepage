@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://www.frontendmentor.io/solutions/responsive-room-homepage-using-desktopfirst-approach-and-css-grid-CdEVJjAN5J)
-- Live Site URL: [Live Site](https://imd94.github.io/room-homepage)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/responsive-news-homepage-using-css-grid-only-ENEmfxSjb_)
+- Live Site URL: [Live Site](https://imd94.github.io/news-homepage)
 
 ## My process
 
