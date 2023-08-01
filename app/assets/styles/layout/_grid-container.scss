@@ -1,0 +1,17 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: [full-start] minmax(1.5rem, 1fr) [center-start] repeat(12, [col-start] minmax(2rem, 9.25rem) [col-end]) [center-end] minmax(1.5rem, 1fr) [full-end]; 
+
+    @include lg {
+        grid-template-columns: [full-start] minmax(1.5rem, 1fr) [center-start] repeat(12, [col-start] minmax(2rem, 7.75rem) [col-end]) [center-end] minmax(1.5rem, 1fr) [full-end]; 
+    }    
+    @include md { 
+        grid-template-columns: [full-start] minmax(1.5rem, 1fr) [center-start] repeat(12, [col-start] minmax(2rem, 5.75rem) [col-end]) [center-end] minmax(1.5rem, 1fr) [full-end]; 
+    }
+    @include sm { 
+        grid-template-columns: [full-start] minmax(1.5rem, 1fr) [center-start] repeat(12, [col-start] minmax(2rem, 4.25rem) [col-end]) [center-end] minmax(1.5rem, 1fr) [full-end]; 
+    }
+    @include xxs { 
+        grid-template-columns: [full-start] 1.5rem [center-start] minmax(2rem, 1fr) [center-end] 1.5rem [full-end]; 
+    } 
+}

@@ -1,0 +1,65 @@
+.sidebar {
+    grid-column: col-end 8 / center-end;
+    margin-left: 2rem;
+    background-color: $very_dark_blue;
+    padding: 3.5rem 0;
+
+    @include md {
+        padding: 3rem 0;
+    }
+
+    @include sm {
+        grid-column: center-start / center-end;
+        margin-left: 0;
+    }
+
+    @include xs {
+        padding: 2.5rem 0;
+    }
+
+    &__title {
+        font-size: 3.7rem;
+        color: $primary_color_1;
+        margin: 0 0 3rem 2.5rem;
+
+        @include md {
+            margin-left: 2rem;
+        }
+    }
+
+    &__news-list {
+        margin: 0;
+        padding: 0 2.5rem;
+        list-style: none;
+        max-height: 37.2rem; //39.5rem
+        overflow-y: auto;
+        scrollbar-width: thin;
+
+        &::-webkit-scrollbar {
+            width: .6rem;
+            height: .6rem;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: $very_dark_blue;
+            
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba($white, .6);
+            border-right: .4rem solid $very_dark_blue;
+        }
+
+        @include md {
+            padding: 0 2rem;
+        }
+    }
+
+    &__news-item {
+        &:not(:last-child) {
+            padding-bottom: 2.9rem;
+            margin-bottom: 2.9rem;
+            border-bottom: 1px solid rgba($white, .4);
+        }
+    }
+}

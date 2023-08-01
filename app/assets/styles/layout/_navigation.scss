@@ -1,0 +1,130 @@
+.navigation {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 2rem;
+    align-items: center;
+    position: relative;
+    margin-bottom: 5.5rem;
+    z-index: 9;
+
+    @include sm {
+        margin-bottom: 3.2rem;
+    }
+
+    &__wrapper {
+        width: 144rem;
+    }
+
+    .logo {
+
+        img {
+            width: auto;
+            height: 4rem;
+
+            @include sm {
+                height: 2.8rem;
+            }
+        }
+    }
+
+    &__list {
+        margin: 0;
+        margin-left: auto;
+        padding: 0;
+        list-style: none;
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    &__item {
+        float: left;
+        &:not(:last-child) {
+            margin-right: 4rem;
+        }
+    }
+
+    &__link {
+        font-size: 1.56rem;
+        color: $dark_grayish_blue;
+        transition: color .3s ease;
+
+        &:hover {
+            color: $primary_color_2;
+        }
+    }
+
+
+    &__menu-icon {
+        width: 4rem;
+        height: 1.7rem;
+        position: absolute;
+        top: 50%;
+        right: 0; 
+        margin-top: -.6rem;
+        z-index: 10;
+        cursor: pointer;
+        display: none;
+
+        @include sm {
+            transform: translateY(-.2rem);
+            display: inline-block;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4rem;
+            height: .3rem;
+            background-color: $very_dark_blue;
+            transform-origin: 20% 0;
+            transition: transform .3s ease-out;
+        }
+
+        &__middle {
+            position: absolute;
+            top: .7rem;
+            left: 0;
+            width: 4rem;
+            height: .3rem;
+            background-color: $very_dark_blue;
+            opacity: 1;
+            transition: transform .3s ease-out, opacity .3s ease-out;
+            transform-origin: 0 50%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 4rem;
+            height: .3rem;
+            background-color: $very_dark_blue;
+            transform-origin: 25% 100%;
+            transition: transform .3s ease-out;
+        }
+    }
+
+    &__menu-icon--close-x {
+        &::before {
+            transform: rotate(45deg) scaleX(1.1);
+            background-color: $very_dark_blue;
+        }
+
+        .navigation__menu-icon__middle {
+            opacity: 0;
+            transform: scaleX(0);
+            background-color: $very_dark_blue;
+        }
+
+        &::after {
+            transform: rotate(-45deg) scaleX(1.1) translateY(.1rem);
+            background-color: $very_dark_blue;
+        }
+    }
+}

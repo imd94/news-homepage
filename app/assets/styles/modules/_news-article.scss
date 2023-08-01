@@ -1,0 +1,29 @@
+.news-article {
+    &__title {
+        color: $white;
+        line-height: 1.4;
+        margin: 0 0 1.1rem;
+
+        @include xs {
+            margin: 0 0 .8rem;
+        }
+
+        a {
+            color: $white;
+            transition: color .3s ease;
+
+            &:hover {
+                color: $primary_color_1;
+            }
+        }
+    }
+
+    &__content {
+        color: rgba($white, .6);
+        margin-bottom: 0;
+
+        @include xs {
+            line-height: 1.7;
+        }
+    }
+}

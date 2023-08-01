@@ -1,0 +1,12 @@
+.tech-blogs {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    margin-top: 7rem;
+
+    @include sm {
+        grid-template-columns: 1fr;
+        margin-top: 6.5rem;
+    }
+}

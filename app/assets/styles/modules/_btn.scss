@@ -1,0 +1,28 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 1.85rem 3.7rem 1.6rem;
+      display: inline-block;
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+      font-weight: 600;
+      font-size: 1.35rem;
+      line-height: 1;
+      background-color: $primary_color_2;
+      color: $white;
+      border: none;
+      letter-spacing: .35rem;
+      cursor: pointer;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $very_dark_blue;
+    }
+  
+}
